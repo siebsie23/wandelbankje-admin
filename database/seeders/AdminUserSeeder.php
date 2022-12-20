@@ -17,6 +17,7 @@ class AdminUserSeeder extends Seeder
     public function run()
     {
         $adminRole = Role::create(['name' => 'Administrator']);
+        $adminRole->givePermissionTo(Permission::create(['name' => 'admin']));
 
         $adminUser = User::factory()->create([
             'email' => 'admin@example.com',

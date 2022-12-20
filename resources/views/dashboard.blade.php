@@ -14,7 +14,13 @@
                     </div>
 
                     <div class="mt-6 text-gray-500">
-                        This is the Wandelbankje dashboard. Here you can view all statistics, benches, reviews, images etc. and manage them.
+                        @can('admin')
+                            You are logged in as an administrator!
+                            Here you can view all statistics, benches, reviews, images etc. and manage them.
+                        @else
+                            You are logged in as a user!
+                            There is nothing here for you yet. But check again in the future!
+                        @endcan
                     </div>
                 </div>
             </div>
