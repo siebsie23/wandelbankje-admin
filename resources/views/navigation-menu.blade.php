@@ -16,7 +16,7 @@
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
                     @can('admin')
-                        <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('benches')">
+                        <x-jet-nav-link href="{{ route('benches') }}" :active="request()->routeIs('benches')">
                             {{ __('Benches') }}
                         </x-jet-nav-link>
                     @endcan
@@ -146,7 +146,7 @@
                 {{ __('Dashboard') }}
             </x-jet-responsive-nav-link>
             @can('admin')
-                <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('benches')">
+                <x-jet-responsive-nav-link href="{{ route('benches') }}" :active="request()->routeIs('benches')">
                     {{ __('Benches') }}
                 </x-jet-responsive-nav-link>
             @endcan
