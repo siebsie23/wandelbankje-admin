@@ -23,6 +23,6 @@ COPY .env.example /var/www/html/.env
 
 RUN php artisan config:cache && \
     php artisan route:cache && \
-    chmod 777 -R /var/www/html/storage/ && \
-    chown -R www-data:www-data /var/www/ && \
+    chmod -R 755 /var/www/html/storage && \
+    chown -R www-data:www-data /var/www/html && \
     a2enmod rewrite
