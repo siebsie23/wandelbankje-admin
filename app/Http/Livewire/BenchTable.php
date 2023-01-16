@@ -20,8 +20,6 @@ class BenchTable extends DataTableComponent
         return [
             Column::make("Id", "id")
                 ->sortable(),
-            Column::make("Name", "name")
-                ->sortable(),
             Column::make("Coordinates", "coordinates")
                 ->sortable()
                 ->format(function($value) {
