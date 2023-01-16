@@ -24,8 +24,8 @@ class BenchTable extends DataTableComponent
                 ->sortable(),
             Column::make("Coordinates", "coordinates")
                 ->sortable()
-                ->format(function($value, $column, $row) {
-                    return $column->longitude . ", " . $column->latitude;
+                ->format(function($value) {
+                    return $value->longitude . ", " . $value->latitude;
                 }),
             Column::make("Created at", "created_at")
                 ->sortable(),
